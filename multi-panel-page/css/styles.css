@@ -1,0 +1,111 @@
+html{
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+h1, h2, h3, h4, p{
+    margin-top: 0;
+}
+
+h1{
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+h2 {
+font-size: 30px;
+line-height: 1;
+}
+
+h3 {
+    text-align: center;
+    line-height: 1;
+    font-size: 40px;
+    margin-bottom: 38px;
+}
+h4{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+h5{
+     text-align: center;
+    line-height: 1;
+    font-size: 40px;
+    margin-top: -29px;
+} 
+
+header {
+background-color: rgba(255, 0, 0, 5);
+background-image: url("../images/intro-photo.jpg");
+text-align: center;
+padding: 166px 0 162px 0;
+color: white;
+}
+
+div.column {
+/* background-color: rgba(0, 225, 0, 5); */
+width: 960px;
+margin:auto
+}
+
+.first-frog {
+    float: right;
+    border: 1px solid black;
+    margin-left: 38px;
+    margin-bottom: 38px;
+}
+
+section{
+
+    padding: 50px 0 82px 0;
+}
+
+section.intro {
+background-color: rgb(214, 137, 186);
+}
+
+section.photogrid {
+ padding-bottom: 40px;
+ background-color: rgb(207, 113, 190); ;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 22px;
+   
+}
+li{
+    display: grid;
+     grid-template-columns: 200px 1fr;
+}
+
+li > div {
+    padding-left:12px;
+    padding-right: 22px;
+}
+
+p.final {
+margin-top: -28px;
+font-size: 27px;
+padding-right: 114px;
+text-align: center;
+padding-left: 114px;
+line-height: 1.34;
+}
+
+section.final {
+    background-color:  rgb(173, 86, 186);
+     padding-bottom: 55px;
+}
+ footer > p {
+    text-align: left;
+ }
+ footer{
+     background-color:  rgb(124, 86, 186);
+    
+ }
