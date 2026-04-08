@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Characters - Moomin Site</title>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="logo"><img src="images/logo moomin.png"></a>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="characters.html">CHARACTERS</a>
+    <a href="setting.html">SETTING</a>
+    <a href="media.html">MEDIA</a>
+  </div>
+</nav>
+
+<!-- BACKGROUND IMAGE PLACEHOLDER -->
+<div class="page-background" style="background-image: url('images/characters-bg.jpg');"></div>
+
+<!-- WHITE BOX -->
+<div class="main-box">
+
+  <div class="tag">CHARACTERS</div>
+
+  <div class="grid-container">
+    <!-- 6 character grid items -->
+    <div class="grid-item" style="background-color: #c7d6df;">
+      <img src="images/img 1 about.jpg">
+      <h3>Name</h3>
+      <div class="grid-tab">Lorem ipsum info about this character.</div>
+    </div>
+    <div class="grid-item" style="background-color: #dce3e9;">
+      <img src="images/img 1 about.jpg">
+      <h3>Name</h3>
+      <div class="grid-tab">Lorem ipsum info about this character.</div>
+    </div>
+    <div class="grid-item" style="background-color: #f0e8e0;">
+      <img src="images/img 1 about.jpg">
+      <h3>Name</h3>
+      <div class="grid-tab">Lorem ipsum info about this character.</div>
+    </div>
+    <div class="grid-item" style="background-color: #c7d6df;">
+      <img src="images/img 1 about.jpg">
+      <h3>Name</h3>
+      <div class="grid-tab">Lorem ipsum info about this character.</div>
+    </div>
+    <div class="grid-item" style="background-color: #dce3e9;">
+      <img src="images/img 1 about.jpg">
+      <h3>Name</h3>
+      <div class="grid-tab">Lorem ipsum info about this character.</div>
+    </div>
+    <div class="grid-item" style="background-color: #f0e8e0;">
+      <img src="images/img 1 about.jpg">
+      <h3>Name</h3>
+      <div class="grid-tab">Lorem ipsum info about this character.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA to next page -->
+<section class="cta">
+  <p>Continue exploring the world...</p>
+  <a href="setting.html" class="btn">GO TO SETTING →</a>
+</section>
+
+<script>
+  // simple toggle for grid tab info
+  const tabs = document.querySelectorAll('.grid-tab');
+  tabs.forEach(tab => {
+    tab.style.display = 'none';
+    tab.previousElementSibling.addEventListener('click', () => {
+      tab.style.display = tab.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
