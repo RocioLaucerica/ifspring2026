@@ -1,0 +1,84 @@
+<body class="media-page">
+
+<nav class="navbar">...</nav>
+
+<div class="page-background" style="background-image: url('images/media-bg.jpg');"></div>
+<img src="images/moominhouse.png" class="top-image">
+
+<section class="media-intro">
+  <div class="intro-text" onclick="scrollToSection()">
+    Explore Moomin media ↓
+  </div>
+</section>
+
+<div class="main-box">
+  <div class="tag">MEDIA</div>
+
+  <div class="grid-container">
+
+    <div class="grid-item" style="background:#d0e6f6; color:#1e3a5f;">
+      <img src="images/img 1 about.jpg">
+      <h3>Television</h3>
+      <div class="grid-tab">Moomin has appeared in many TV adaptations...</div>
+    </div>
+
+    <div class="grid-item" style="background:#f6d6d6; color:#5a1f1f;">
+      <img src="images/img 1 about.jpg">
+      <h3>Film</h3>
+      <div class="grid-tab">Several films bring Moomin stories to life...</div>
+    </div>
+
+    <div class="grid-item" style="background:#e6f0d6; color:#3a5a1f;">
+      <img src="images/img 1 about.jpg">
+      <h3>Books</h3>
+      <div class="grid-tab">The original Moomin stories were written as novels...</div>
+    </div>
+
+    <div class="grid-item" style="background:#efe0f6; color:#4a2a5a;">
+      <img src="images/img 1 about.jpg">
+      <h3>Comics</h3>
+      <div class="grid-tab">Moomin comics expand the world visually...</div>
+    </div>
+
+  </div>
+</div>
+
+<section class="cta">
+  <p>Return to the beginning...</p>
+  <a href="index.html" class="btn">GO TO HOME →</a>
+</section>
+
+<script>/* SAME SCRIPT ABOVE */</script>
+
+</body>
+<script>
+function scrollToSection() {
+  document.querySelector('.main-box').scrollIntoView({ behavior: 'smooth' });
+}
+
+const items = document.querySelectorAll('.grid-item');
+
+items.forEach(item => {
+  const title = item.querySelector('h3');
+  const tab = item.querySelector('.grid-tab');
+
+  tab.style.display = 'none';
+
+  title.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+
+    items.forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.grid-tab').style.display = 'none';
+    });
+
+    if (!isActive) {
+      item.classList.add('active');
+      tab.style.display = 'block';
+    }
+  });
+});
+</script>
+
+</body>
+</html>

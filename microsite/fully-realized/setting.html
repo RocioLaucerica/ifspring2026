@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings - Moomin Site</title>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="settings-page">
+
+<nav class="navbar">
+  <a href="index.html" class="logo"><img src="images/moomin b.png"></a>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="characters.html">CHARACTERS</a>
+    <a href="setting.html">SETTING</a>
+    <a href="media.html">MEDIA</a>
+  </div>
+</nav>
+
+<div class="page-background" style="background-image: url('images/settings-bg.jpg');"></div>
+
+
+<section class="settings-intro">
+  <div class="intro-text" onclick="scrollToSection()">
+    Explore the world of Moomin Valley ↓
+  </div>
+</section>
+
+<div class="main-box">
+  <div class="tag">SETTINGS</div>
+
+  <div class="grid-container">
+
+    <div class="grid-item" style="background:#d9e8f5; color:#1f3b57;">
+      <img src="images/fccce7acf094b865a1c5142cad7b3ecf.jpg">
+      <h3 class="character-title">
+  Hattifatteners’ Island<span class="arrow">▼</span>
+</h3>
+      <div class="grid-tab">
+        Once a year, during a thunderstorm, the Hattifatteners meet in large numbers at the deserted island...
+      </div>
+    </div>
+
+    <div class="grid-item" style="background:#e6dfc8; color:#5a4b2c;">
+      <img src="images/672e9a87332d21c6260537dc85a710e4.jpg">
+<h3 class="character-title">
+The Lonely Mountains<span class="arrow">▼</span>
+</h3>
+      <div class="grid-tab">
+        Moominvalley is surrounded by the Lonely Mountains, feared by many...
+      </div>
+    </div>
+
+    <div class="grid-item" style="background:#f4d6d6; color:#6b2d2d;">
+      <img src="images/4013c7e87a484d4057645d2cbab16893.jpg">
+    <h3 class="character-title">
+Sniff’s Cave<span class="arrow">▼</span>
+</h3>
+      <div class="grid-tab">
+        Sniff’s cave has smooth walls and soft sand...
+      </div>
+    </div>
+
+    <div class="grid-item" style="background:#d7f0dc; color:#2d5c3a;">
+      <img src="images/img 1 about.jpg">
+    <h3 class="character-title">
+Snufkin’s Tent<span class="arrow">▼</span>
+</h3>
+      <div class="grid-tab">
+        Snufkin wanders freely and sets up his tent wherever he feels at home...
+      </div>
+    </div>
+
+    <div class="grid-item" style="background:#f5e6c8; color:#6b4f2d;">
+      <img src="images/img 1 about.jpg">
+     <h3 class="character-title">
+Moominhouse Hammock<span class="arrow">▼</span>
+</h3>
+      <div class="grid-tab">
+        The hammock is a peaceful resting place in the Moomin garden...
+      </div>
+    </div>
+
+    <div class="grid-item" style="background:#cfe0f5; color:#2c4a6b;">
+      <img src="images/img 1 about.jpg">
+    <h3 class="character-title">
+ Moominhouse<span class="arrow">▼</span>
+</h3>
+      <div class="grid-tab">
+        The round blue Moominhouse is home to the Moomin family...
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="cta">
+  <p>Want to watch or read Moomin for yourself?</p>
+  <a href="media.html" class="btn">EXPLORE MEDIA →</a>
+</section>
+
+<!-- SAME SCRIPT -->
+<script>
+function scrollToSection() {
+  document.querySelector('.main-box').scrollIntoView({ behavior: 'smooth' });
+}
+
+const items = document.querySelectorAll('.grid-item');
+
+items.forEach(item => {
+  const title = item.querySelector('h3');
+  const tab = item.querySelector('.grid-tab');
+
+  tab.style.display = 'none';
+
+  title.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+
+    items.forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.grid-tab').style.display = 'none';
+    });
+
+    if (!isActive) {
+      item.classList.add('active');
+      tab.style.display = 'block';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
