@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Characters - Moomin Site</title>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+
+<!-- NAVBAR -->
+ <nav class="navbar">
+
+  <a href="index.html" class="logo">
+    <img src="images/moomin b.png">
+  </a>
+
+  <!-- hamburger button -->
+  <button class="menu-toggle">☰</button>
+
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="characters.html"class="active">CHARACTERS</a>
+    <a href="setting.html">SETTING</a>
+    <a href="media.html">MEDIA</a>
+  </div>
+
+</nav>
+
+
+<body class="characters-page">
+
+<!-- INTRO SECTION -->
+<section class="characters-intro">
+  <div class="intro-text" onclick="scrollToCharacters()">
+    Explore all of the characters in the world of Moomin ↓
+  </div>
+</section>
+
+<div class="main-box">
+
+
+
+  <div class="grid-container">
+
+    <!-- MOOMINTROLL -->
+    <div class="grid-item" style="background:#6e9ed1; color:#242628;">
+      <img src="images/moomintroll.jpg">
+      <h3 class="character-title" style="color:#152431;">
+        Moomintroll <span class="arrow" style="color:#152431;">▲</span>
+      </h3>
+      <div class="grid-tab" style=" font-family: 'Nunito', sans-serif;">
+        Moomintroll is the protagonist of the series, Moomintroll is a spirited, white troll with a round snout. He is adventurous, curious, and often finds himself in various escapades with his friends. Moomintroll is known for his good-natured personality and his close friendship with Snufkin, Snorkmaiden, and his parents. 
+      </div>
+    </div>
+
+    <!-- MOOMINMAMMA -->
+    <div class="grid-item" style="background:#ffd863; color:#ee5252;">
+      <img src="images/moominmamma.jpg">
+      <h3 class="character-title" style="color:#ee5252;">
+        Moominmamma <span class="arrow" style="color:#ee5252;">▲</span>
+      </h3>
+      <div class="grid-tab"  style=" font-family: 'Nunito', sans-serif;">
+        Moominmamma is Moomintroll's nurturing mother, she is calm and resourceful, often carrying a handbag filled with essentials. Moominmamma is supportive and understanding, providing comfort to her family during their adventures. She also often sports a red and white striped apron.
+      </div>
+    </div>
+
+    <!-- MOOMINPAPPA -->
+    <div class="grid-item" style="background:#285c86; color:rgb(24, 35, 87);">
+      <img src="images/moominpappa1.jpg">
+      <h3 class="character-title" style="color:#ffffff;">
+        Moominpappa <span class="arrow" style="color:#ffffff;">▲</span>
+      </h3>
+      <div class="grid-tab"  style=" font-family: 'Nunito', sans-serif;">
+        Moominpappa is the father of Moomintroll, Moominpappa is a somewhat restless character who enjoys storytelling and reminiscing about his youth. He is often seen wearing a black top hat and is determined to be a responsible father. 
+      </div>
+    </div>
+
+    <!-- SNUFKIN -->
+    <div class="grid-item" style="background:#f9f7f3; color:#15667a;">
+      <img src="images/214878e8c749f3b583fdf33f596f37eb.jpg">
+      <h3 class="character-title" style="color:#489785;">
+        Snufkin <span class="arrow" style="color:#489785;">▲</span>
+      </h3>
+      <div class="grid-tab" style=" font-family: 'Nunito', sans-serif;">
+        Snufkin is Moomintroll's best friend, Snufkin is a free-spirited wanderer who loves nature and music. He is known for his wisdom and calm demeanor, often providing guidance to Moomintroll. Snufkin wears old green clothes and a wide-brimmed hat that he has had since birth. He lives in a tent, smokes a pipe, and plays the harmonica.
+      </div>
+    </div>
+
+    <!-- SNORK MAIDEN -->
+    <div class="grid-item" style="background:#f8b9c9; color:#5a4a6b;">
+      <img src="images/snork maiden.jpg">
+      <h3 class="character-title" style="color:#4a3b5c;">
+        Snork Maiden <span class="arrow" style="color:#4a3b5c;">▲</span>
+      </h3>
+      <div class="grid-tab" style=" font-family: 'Nunito', sans-serif;">
+      Snork Maiden is Moomintroll's love interest, Snork Maiden is a kind and gentle character who shares a close bond with Moomintroll. She is adventurous and often joins him on his quests. Snorks are almost identical to Moomins except that Snorks have hair on their heads, and their fur changes color depending on their mood.
+      </div>
+    </div>
+
+    <!-- LITTLE MY -->
+    <div class="grid-item" style="background:#d83b30; color:rgb(126, 17, 17);">
+      <img src="images/little my.jpg">
+      <h3 class="character-title" style="color:#ffffff;">
+        Little My <span class="arrow" style="color:#ffffff;">▲</span>
+      </h3>
+      <div class="grid-tab" style=" font-family: 'Nunito', sans-serif;">
+     Little My is a small, determined, and fiercely independent Mymble. She is very aggressive and totally disrespectful, but can be a good friend. She is Snufkin's elder half-sister and first appeared in The Exploits of Moominpappa, in which her small stature is explained as resulting from arrest of growth.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA to next page -->
+<section class="cta">
+  <p>Wondering where these characters live? Click bellow! </p>
+  <a href="setting.html" class="btn"> EXPLORE MOOMINVALLEY</a>
+</section>
+
+
+
+<script>
+const items = document.querySelectorAll('.grid-item');
+
+ function scrollToCharacters() {
+  document.querySelector('.main-box').scrollIntoView({ behavior: 'smooth' });
+ }
+
+items.forEach(item => {
+  const title = item.querySelector('.character-title');
+  const tab = item.querySelector('.grid-tab');
+
+  tab.style.display = 'none';
+
+  title.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+
+    
+
+    // close all
+    items.forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.grid-tab').style.display = 'none';
+    });
+
+    if (!isActive) {
+      item.classList.add('active');
+      tab.style.display = 'block';
+    }
+  });
+});
+   const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>

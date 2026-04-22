@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Moomin Site</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300;500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+ <nav class="navbar">
+
+  <a href="index.html" class="logo">
+    <img src="images/moomin b.png">
+  </a>
+
+  <!-- hamburger button -->
+  <button class="menu-toggle">☰</button>
+
+  <div class="nav-links">
+    <a href="index.html"class="active">HOME</a>
+    <a href="characters.html">CHARACTERS</a>
+    <a href="setting.html">SETTING</a>
+    <a href="media.html">MEDIA</a>
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+<header class="hero">
+  <img src="images/header image with logo 2.jpg">
+
+  <!-- BUTTONS -->
+  <div class="hero-buttons"; >
+    <button onclick="scrollToSection('about')">ABOUT</button>
+    <button onclick="scrollToSection('origins')">ORIGINS</button>
+    <button onclick="scrollToSection('creator')">CREATOR</button>
+  </div>
+
+  <!-- LEARN MORE -->
+  <div class="learn-more" onclick="scrollToSection('about')">
+    Learn More
+  </div>
+</header>
+
+<!-- MAIN WHITE CONTAINER -->
+<div class="main-box">
+
+  <!-- ABOUT -->
+  <div id="about" class="section">
+
+    <div class="tag">ABOUT</div>
+
+    <div class="section-content">
+      
+      <div class="images-col">
+        <img src="images/stamp 1 about.jpg">
+        <img src="images/stamp 2 about.jpg">
+        <img src="images/stamp 3 about.jpg">
+        <img src="images/stamp 4 about.jpg" >
+    </div>
+      
+
+      <div class="text-col">
+        <h2>What is Moomin?</h2>
+        <p>
+        Though often confused for just the name of a character, the popularly known “moomin” actually refers to The Moomins. The central characters in a series of books, comics, and later a tv show, originally published in Swedish in Finland, by Swedish-Finn illustrator and writer Tove Jansson. They are a family of trolls who embark on many adventures through moominvalley with their various friends, with the central character often being the face of "moomin", Moomintroll. These lovable characters have become a beloved part of children's literature and culture, known for its whimsical storytelling and deep themes.
+        </p>
+
+        <img src="images/about img 1.jpg">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ORIGINS -->
+  <div id="origins" class="section">
+
+    <div class="tag">ORIGINS</div>
+
+    <div class="section-content split">
+      <div>
+        <h2>Where did Moomin come from?</h2>
+        <p>
+        The first two books about the Moomins 
+(The Moomins and the Great Flood and 
+Comet in Moominland) were published in 
+1945 and 1946 respectively, and deal with 
+natural disasters; they were influenced 
+by the upheavals of war and Jansson's 
+depression during the war years. both 
+were published in swedish. 
+
+The reception of the first two Moomin 
+books was lukewarm at first, however 
+the second book did received more 
+attention than its predecessor and is 
+often seen as first novel in the series 
+as it introduces many of the main 
+characters, like Snufkin and the 
+Snorkmaiden, and is set in Moominvalley. 
+But even them sales were still poor.
+
+
+        </p>
+      </div>
+
+      <img src="images/img 1 about.jpg">
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+      <img src="images/comic img 1.jpg">
+      <p>
+      The third book, Finn Family Moomintroll, 
+which was the first Moomin book 
+translated into English, became the first 
+international bestseller! 
+
+The Moomins also appeared in the form of comic 
+strips. Their first appearance was in 1947 in the 
+children's section of the Ny Tid newspaper,[16] 
+and they were introduced nternationally to English 
+readers in 1954 in the popular London newspaper 
+The Evening News  
+      </p>
+      <img src="images/comic img 2.jpg">
+      <img src="images/comic img 3.jpg">
+    </div>
+
+  </div>
+
+  <!-- CREATOR -->
+  <div id="creator" class="section">
+
+    <div class="tag">CREATOR</div>
+
+    <div class="section-content split">
+      <div class="creator-image">
+  <img src="images/tove 2.jpg" class="img-default">
+  <img src="images/tove 3.jpg" class="img-hover">
+</div>
+
+      <div>
+        <h2>Who made Moomin?</h2>
+        <h3>Tove Marika Jansson</h3>
+
+        <p>
+        Tove Marika Jansson (August 1914 – 27 June 2001) 
+was a Finland-Swedish author, novelist and comic 
+strip author.  She was also a painter, illustrator, 
+and creator of moomin.
+
+She had an upbringing full of creativity, being 
+Brought up by artistic parents and styding art
+from 1930 to 1938 in Helsinki, Stockholm, and Paris.
+
+As a child Tove spent summers with her relatives
+in the Stockholm archipelago. It was from the 
+summer house in Blidö and the area surrounding 
+it that Tove drew her inspiration for Moominvalley
+and Moominhouse with its terrace and slender tower.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <p>
+    Though Moomintroll might be the main character, there are so many lovable friends in the world of moomin!
+  </p>
+ <p>
+    Want to meet them all? Click bellow!
+  </p>
+  <a href="characters.html" class="btn">
+    EXPLORE CHARACTERS
+  </a>
+</div>
+
+<script>
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  const y = el.offsetTop - 70;
+  window.scrollTo({ top: y, behavior: "smooth" });
+}
+   const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>
